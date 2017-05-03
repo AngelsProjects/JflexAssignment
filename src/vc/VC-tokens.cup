@@ -1,0 +1,54 @@
+/*-***
+ *
+ * This is a skeleton CUP file used to generate numeric values for the tokens
+ * recognized by the stand-alone lexer in vc.flex.  
+ *
+ */
+
+import java_cup.runtime.*;
+
+terminal IDENTIFIER;
+terminal FLOATING_POINT_LITERAL;
+terminal INTEGER_LITERAL;
+terminal BOOLEAN;
+terminal BREAK;
+terminal CONTINUE;
+terminal ELSE;
+terminal FLOAT;
+terminal FOR;
+terminal INT;
+terminal IF;
+terminal RETURN;
+terminal VOID;
+terminal WHILE;
+terminal BOOLEAN_LITERAL;
+terminal LPAREN;
+terminal RPAREN;
+terminal LBRACE;
+terminal RBRACE;
+terminal LBRACK;
+terminal RBRACK;
+terminal SEMICOLON;
+terminal COMA;
+terminal EQ;
+terminal GT;
+terminal LT;
+terminal NOT;
+terminal NOTEQ;
+terminal EQEQ;
+terminal LTEQ;
+terminal GTEQ;
+terminal ANDAND;
+terminal OROR;
+terminal PLUS;
+terminal MINUS;
+terminal MULT;
+terminal DIV;
+terminal STRING_LITERAL;
+
+/*-*
+ * The following two lines define a dummy non-terminal and grammar rule.  CUP
+ * needs at least one rule to run without errors.
+ */
+non terminal dummy;
+dummy ::= ;
