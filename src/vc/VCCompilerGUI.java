@@ -247,6 +247,25 @@ public class VCCompilerGUI extends javax.swing.JFrame {
         valueLabel.setText("Value : " + currentSym.value);
         lineLabel.setText("Line : " + currentSym.left);
         columnLabel.setText("Column : " + currentSym.right);
+		
+		
+		
+		 /*
+        Aqui se pintan los tokens
+         */
+
+        //Limpiamos cualquier otro estilo anterior
+        orginalFile.getHighlighter().removeAllHighlights();
+
+        //ingresamos desde donde y hasta donde se pintara
+        int startIndex = orginalFile.getLineStartOffset(currentSym.left - 1) + currentSym.right - 1;
+        int endIndex = startIndex + currentSym.value.toString().length();
+
+        //escogemos un colo para pintarlo
+        DefaultHighlighter.DefaultHighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(Color.LIGHT_GRAY);
+        
+        //Por ultimo agregamos esas 3 variables anterior a un nuevo estilo Highlight a nuestro TEXTAREA
+        orginalFile.getHighlighter().addHighlight(startIndex, endIndex, painter);
     }
     /**
      * @param args the command line arguments
